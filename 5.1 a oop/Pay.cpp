@@ -65,6 +65,7 @@ Pay ::operator string() const
 	ss << "Second = " << second << endl;
 	return ss.str();
 }
+/*
 Pay operator +(const Pay& x, const Pay& y)
 {
 	return Pay(x.first + y.first, x.second + y.second);
@@ -84,7 +85,7 @@ Pay operator /(const Pay& x, const Pay& y)
 Pay operator ^(const Pay& x, const Pay& y)
 {
 	return Pay(pow(x.first, y.first), pow(x.second, y.second));
-}
+}*/
 ostream& operator << (ostream& out, const Pay& x)
 {
 	out << string(x);

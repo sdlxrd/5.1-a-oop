@@ -35,5 +35,11 @@ int main()
 	} while (!res);
 	cout << "Count of days = "; cin >> n;
 	cout << "Sum = " << a.Sum(n) << endl;
-	
- }
+	cout << endl;
+	cout << "a++ " << endl << a++ << endl;
+	cout << "result = "  << endl << a << endl;
+	cout << "a-- "<< endl<< a-- << endl;
+	cout << "result = " << endl << a << endl;
+cout << "++a " << endl << ++a << endl;
+cout << "--a " << endl << --a << endl;
+ } 

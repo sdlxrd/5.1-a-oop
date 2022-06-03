@@ -11,7 +11,7 @@ namespace UnitTest1
 		
 		TEST_METHOD(TestMethod1)
 		{
-			Pay a(1, 1);
+			Pay a(0, 0);
 			a.setFirst(15);
 			a.setSecond(3);
 			
