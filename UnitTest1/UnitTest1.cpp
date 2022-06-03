@@ -11,12 +11,12 @@ namespace UnitTest1
 		
 		TEST_METHOD(TestMethod1)
 		{
-			Pay a(0, 0);
-			a.setFirst(15);
-			a.setSecond(3);
-			
-			int n = 10;
-			Assert::AreEqual(50., a.Sum(10));
+			Pay a(1, 1);
+
+			a.setFirst(2);
+			a.setSecond(2);
+
+			Assert::AreEqual(1.0, a.Sum(1));
 		}
 	};
 }

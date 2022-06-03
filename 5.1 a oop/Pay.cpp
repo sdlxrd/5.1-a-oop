@@ -99,9 +99,9 @@ istream& operator >>(istream& in, Pay& x)
 	cout << "First = "; in >> f;
 	cout << "Second = "; in >> s;
 
-	if (f< 0 or s < 0)
+	if (f< 0 || s < 0)
 	{
-		throw NewException("Number must be > 0");
+		throw NewException("Numbers must be > 0");
 	}
 	else 
 	{
@@ -138,5 +138,5 @@ Pay Pay::operator --(int)
 }
 double Pay::Sum(int s)
 {
-	return getFirst() / getSecond()  * s;
+	return first / second * s;
 }
