@@ -2,13 +2,16 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-
+#define debug
 using namespace std;
 
 void Pay::setFirst(double x)
 {
 	if (x < 0)
 	{
+#ifdef debug
+		cout << "/////////////////////////////////\nPay::setFirst(double)\n/////////////////////////////////" << endl;
+#endif
 		throw Exception("Numbers be > 0");
 	}
 	else
@@ -20,6 +23,9 @@ void Pay::setSecond(int x)
 {
 	if (x < 0)
 	{
+#ifdef debug
+		cout << "/////////////////////////////////\nPay::setSecond(int)\n/////////////////////////////////" << endl;
+#endif
 		throw Exception("Numbers be > 0");
 	}
 	else
@@ -36,6 +42,9 @@ Pay::Pay(double f = 0, int s = 0)
 {
 	if (f < 0 || s < 0)
 	{
+#ifdef debug
+		cout << "/////////////////////////////////\nPay::Pay(double, int)\n/////////////////////////////////" << endl;
+#endif
 		throw invalid_argument("Numbers must be > 0");
 	}
 	else
@@ -93,14 +102,17 @@ ostream& operator << (ostream& out, const Pay& x)
 }
 istream& operator >>(istream& in, Pay& x)
 {
-	int f;
-	double s;
+double f;
+	int s;
 
 	cout << "First = "; in >> f;
 	cout << "Second = "; in >> s;
 
 	if (f< 0 || s < 0)
 	{
+#ifdef debug
+		cout << "/////////////////////////////////\nistream& operator >>\n/////////////////////////////////" << endl;
+#endif		
 		throw NewException("Numbers must be > 0");
 	}
 	else 

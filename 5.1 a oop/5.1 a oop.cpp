@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 #include "Pay.h"
-//#define debug
+#define debug
 using namespace std;
 
 int main()
@@ -35,7 +35,8 @@ int main()
 	} while (!res);
 	
 	cout << "Count of days = "; cin >> n;
-	cout << "Sum = " << a.Sum(n) << endl;
+	cout << endl;
+	cout << "first / second * count = " << a.Sum(n) << endl;
 	cout << endl;
 	cout << "a++ " << endl << a++ << endl;
 	cout << "result = " << endl << a << endl;
@@ -43,4 +44,6 @@ int main()
 	cout << "result = " << endl << a << endl;
 	cout << "++a " << endl << ++a << endl;
 	cout << "--a " << endl << --a << endl;
+
+	system ("pause");
 }
