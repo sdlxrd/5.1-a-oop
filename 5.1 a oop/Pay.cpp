@@ -74,27 +74,7 @@ Pay ::operator string() const
 	ss << "Second = " << second << endl;
 	return ss.str();
 }
-/*
-Pay operator +(const Pay& x, const Pay& y)
-{
-	return Pay(x.first + y.first, x.second + y.second);
-}
-Pay operator -(const Pay& x, const Pay& y)
-{
-	return Pay(x.first - y.first, x.second - y.second);
-}
-Pay operator *(const Pay& x, const Pay& y)
-{
-	return Pay(x.first * y.first, x.second * y.second);
-}
-Pay operator /(const Pay& x, const Pay& y)
-{
-	return Pay(x.first / y.first, x.second / y.second);
-}
-Pay operator ^(const Pay& x, const Pay& y)
-{
-	return Pay(pow(x.first, y.first), pow(x.second, y.second));
-}*/
+
 ostream& operator << (ostream& out, const Pay& x)
 {
 	out << string(x);
@@ -151,4 +131,17 @@ Pay Pay::operator --(int)
 double Pay::Sum(int s)
 {
 	return first / second * s;
+}
+bool Pay::Init(int first, int second)
+{
+	if (first >= 0 && second >= 0)
+	{
+		setFirst(first);
+		setSecond(second);
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }

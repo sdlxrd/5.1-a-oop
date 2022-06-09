@@ -24,12 +24,6 @@ public:
 	Pay& operator=(const Pay&);
 	operator string() const;
 	
-	friend Pay operator +(const Pay&, const Pay&);
-	friend Pay operator -(const Pay&, const Pay&);
-	friend Pay operator *(const Pay&, const Pay&);
-	friend Pay operator /(const Pay&, const Pay&);
-	friend Pay operator ^(const Pay&, const Pay&);
-	
 	friend ostream& operator <<(ostream&, const Pay&);
 	friend istream& operator >>(istream&, Pay&);
 	
@@ -37,6 +31,8 @@ public:
 	Pay operator ++(int);
 	Pay& operator --();
 	Pay operator --(int);
+	
+	bool Init(int, int);
 	
 	double Sum(int n);
 };

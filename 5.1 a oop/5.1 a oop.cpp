@@ -3,6 +3,14 @@
 #define debug
 using namespace std;
 
+Pay makePay(int x, int y)
+{
+	Pay pay;
+	if (!pay.Init(x, y))
+		cout << "wrong argument init" << endl;
+	
+	return pay;
+}
 int main()
 {
 	bool res;
